@@ -1,7 +1,7 @@
-// SOAL NO 1 | Problem Solving Basic - Test 1
+// SOAL NO 1 
 import React from 'react';
 
-class MinMaxSum extends React.Component {
+class MinMaxSum1 extends React.Component {
   findMinMaxSum(int) {
     int.sort((a, b) => a - b); // Sort the integers in ascending order
     const minSum = int.slice(0, 4).reduce((sum, num) => sum + num, 0); // Sum of the first four integers
@@ -10,7 +10,8 @@ class MinMaxSum extends React.Component {
   }
 
   render() {
-    const int = [5, 2, 8, 1, 9];
+    const int = [5, 2, 8, 1, 9]; // Problem Solving Basic - Test 1
+    // const int = [1, 2, 3, 4, 5]; // Problem Solving Basic - Test 1 slide 2
     const [minSum, maxSum] = this.findMinMaxSum(int);
 
     return (
@@ -22,4 +23,4 @@ class MinMaxSum extends React.Component {
   }
 }
 
-export default MinMaxSum;
+export default MinMaxSum1;
