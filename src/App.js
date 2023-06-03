@@ -1,3 +1,4 @@
+// SOAL NO 1 | Problem Solving Basic - Test 1
 import React from 'react';
 
 class MinMaxSum extends React.Component {
