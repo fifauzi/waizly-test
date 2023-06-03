@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class MinMaxSum extends React.Component {
+  findMinMaxSum(int) {
+    int.sort((a, b) => a - b); // Sort the integers in ascending order
+    const minSum = int.slice(0, 4).reduce((sum, num) => sum + num, 0); // Sum of the first four integers
+    const maxSum = int.slice(1).reduce((sum, num) => sum + num, 0); // Sum of the last four integers
+    return [minSum, maxSum];
+  }
+
+  render() {
+    const int = [5, 2, 8, 1, 9];
+    const [minSum, maxSum] = this.findMinMaxSum(int);
+
+    return (
+      <div>
+        <p>Minimum Sum: {minSum}</p>
+        <p>Maximum Sum: {maxSum}</p>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default MinMaxSum;
